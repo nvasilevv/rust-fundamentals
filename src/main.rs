@@ -10,6 +10,8 @@ fn main() {
     println!("Location name: {}, latitude: {}, longitude: {}",
     name, latitude, longitude);
     concat_str_slice();
+    casting_variables();
+    scope_example();
 }
 
 
@@ -31,4 +33,25 @@ fn concat_str_slice() {
     slogan.push(' '); //note that push expects a char which is passed with single quotes. Otherwise, compile error
     slogan = slogan + "every time";
     println!("{}", slogan);
+}
+
+
+fn casting_variables() {
+    let float_a: f32 = 17.2;
+    let unsigned_b: u8 = 5;
+    let float_b: f32 = unsigned_b as f32;
+
+    let result = float_a / float_b;
+}
+
+
+fn scope_example() {
+    let scope_test = "outer scope";
+    println!("{}", scope_test);
+    // defines a scope/code block
+    {
+        let scope_test = "inner scope"; //shadowed within the code block
+        println!("{}", scope_test);
+    }
+    println!("{}", scope_test);
 }
