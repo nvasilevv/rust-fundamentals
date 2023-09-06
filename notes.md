@@ -34,3 +34,15 @@ If you try to divide float by integer the compiler will complain!
 - Variables defined outside of a code block are accessible within the code blocke itself.
 - Creating a variable with the same name as already created variable is called "shadowing"!
 - "Shadowing" variables effectively overrides the value of that variable.
+
+# Operators
+- Modulus operator (%) is quite heavily used in cryptography
+- Rust doesn't have an exponent operator
+
+## Logical operations
+- != negations (the bang)
+- && logical and
+- || logical or operator
+
+## Bitwise operations
+- & (and), | (or), ^ (xor, i.e. logical inequality (exclusive or)), << (shift), >> (shift)

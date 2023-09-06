@@ -12,6 +12,8 @@ fn main() {
     concat_str_slice();
     casting_variables();
     scope_example();
+    exponent_operator();
+    bitwise_operator();
 }
 
 
@@ -54,4 +56,32 @@ fn scope_example() {
         println!("{}", scope_test);
     }
     println!("{}", scope_test);
+}
+
+
+fn exponent_operator() {
+    let squared = i32::pow(8, 2);
+    let float_integer = f32::powi(6.5, 3);
+    let float_float = f32::powf(6.5, 3.14);
+    println!("integer: {},", squared);
+    println!("float to int: {}", float_integer);
+    println!("float to float: {}", float_float);
+}
+
+
+fn bitwise_operator() {
+    let bitwise_and = 86 & 27;
+    println!("bitwise and: {}", bitwise_and);
+
+    let bitwise_or = 86 | 27;
+    println!("bitwise or: {}", bitwise_or);
+
+    let bitwise_xor = 86 ^ 27;
+    println!("bitwise xor: {}", bitwise_xor);
+
+    let left_shift = 86<<1; // this is equivalent to 86 * 2
+    println!("left_shift: {}", left_shift);
+
+    let right_shift = 86>>1; // this is equivalent to 86 / 2
+    println!("right shift: {}", right_shift);
 }
